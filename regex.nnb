@@ -1,0 +1,31 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Use of RegEx:\n* Validate Strings against certain ruls.\n* Find substring within a string.\n* Replace part of the string."
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "'use strict';\n\ndescribe(capitalA, ()=>{\n    test(\"It should return true if the input has uppercase and lowercase characters (no numbers and symbols) and it should end with capital A else return false \", () => {\n        expect(capitalA(\"Hello world A\")).toStrictEqual(true);\n\n        expect(capitalA(\"Hello world\")).toStrictEqual(false);\n\n        expect(capitalA(\"Hello world a\")).toStrictEqual(false);\n    })\n});\n\ndescribe(ioEmail, () => {\n    test(\"It should return true if the input is in email format that end with .io\", () => {\n        expect(ioEmail(\"example@example.io\")).toStrictEqual(true);\n        expect(ioEmail(\"ex@ample@example.io\")).toStrictEqual(false);\n        expect(ioEmail(\"ex.ample@example.io\")).toStrictEqual(false);\n        expect(ioEmail(\"example@example.gmail\")).toStrictEqual(false);\n    })\n});\n\n\ndescribe(imagesSearcher, () => {\n    test(\"It should return all images names that end with jpg, jpeg and png extention\", () => {\n        expect(imagesSearcher(\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, cat.png sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. dog.jpg Ut enim ad minim veniam, quis nostrud exercitation ullamco cow.jpeg laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\")).toStrictEqual(['cat.png', 'dog.jpg', 'cow.jpeg']);\n        expect(imagesSearcher(\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\")).toStrictEqual([]);\n        expect(imagesSearcher(\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. horse.gif Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore dolphin.pdf eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa mouse.tiff qui officia deserunt mollit anim id est laborum.\")).toStrictEqual([]);\n    })\n})"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.error",
+                            "value": {
+                                "name": "ReferenceError",
+                                "message": "describe is not defined",
+                                "stack": "    at <Cell 2> [2, 0]\n    at <Cell 2> [25, 46]\n    at Script.runInContext (node:vm:139:12)\n    at Script.runInNewContext (node:vm:144:17)\n    at Object.runInNewContext (node:vm:298:38)\n    at C (/home/ahmad/.vscode-server/extensions/donjayamanne.typescript-notebook-2.0.6/out/extension/server/index.js:2:113345)\n    at t.execCode (/home/ahmad/.vscode-server/extensions/donjayamanne.typescript-notebook-2.0.6/out/extension/server/index.js:2:114312)\n    at k.<anonymous> (/home/ahmad/.vscode-server/extensions/donjayamanne.typescript-notebook-2.0.6/out/extension/server/index.js:2:142156)\n    at k.emit (node:events:526:28)\n    at k.emit (node:domain:475:12)"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
